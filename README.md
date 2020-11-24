@@ -21,3 +21,8 @@ A utility for versioning using semver and CHANGELOG generation powered by Conven
 ```bash
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.versionrc.js' -OutFile '.versionrc.js'"
 ```
+
+
+## Bug tracker
+
+If you find a bug, please report it [here on Github](https://github.com/zixiCat/config-pack/issues)!
