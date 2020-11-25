@@ -22,6 +22,14 @@ A utility for versioning using semver and CHANGELOG generation powered by Conven
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.versionrc.js' -OutFile '.versionrc.js'"
 ```
 
+#### [rollup.config.js](https://github.com/rollup/rollup)
+
+A module bundler for JavaScript which compiles small pieces of code into something larger and more complex
+
+```bash
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/rollup.config.js' -OutFile 'rollup.config.js'"
+```
+
 
 ## Bug tracker
 
