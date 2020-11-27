@@ -1,5 +1,6 @@
 /**
- * devDependencies: standard-version
+ * The following is the devDependency needed and you can also install it directly by using,
+ * yarn add --dev standard-version
  * */
 const settings = require(process.cwd() + "/package.json");
 
