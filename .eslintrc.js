@@ -19,21 +19,25 @@ module.exports = {
     es2020: true,
   },
   extends: [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "google",
-    "prettier",
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'google',
+    'prettier',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 2020,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react", "prettier", "@typescript-eslint"],
+  plugins: ['react', 'prettier', '@typescript-eslint'],
   rules: {
-    "prettier/prettier": ["error", {semi: true, endOfLine: "auto"}]
+    'prettier/prettier': [
+      'error',
+      { semi: true, endOfLine: 'auto', singleQuote: true },
+    ],
   },
 };
+
