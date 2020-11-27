@@ -10,14 +10,14 @@ module.exports = {
 All notable changes to this project will be documented in this file.
 `,
   types: [
-    { type: "feat", section: "Features" },
-    { type: "fix", section: "Bug Fixes" },
-    { type: "chore", hidden: true },
-    { type: "docs", hidden: true },
-    { type: "style", hidden: true },
-    { type: "refactor", hidden: true },
-    { type: "perf", hidden: true },
-    { type: "test", hidden: true },
+    {type: "feat", section: "Features"},
+    {type: "fix", section: "Bug Fixes"},
+    {type: "chore", hidden: true},
+    {type: "docs", hidden: true},
+    {type: "style", hidden: true},
+    {type: "refactor", hidden: true},
+    {type: "perf", hidden: true},
+    {type: "test", hidden: true},
   ],
   commitUrlFormat: settings.homepage + "/commit/{{hash}}",
   compareUrlFormat:
