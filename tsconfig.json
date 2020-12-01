@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es5",
+    "skipLibCheck": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "sourceMap": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": false,
+    "jsx": "react",
+    "declaration": true,
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "resolveJsonModule": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strict":false,
+    "isolatedModules": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declarationDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "example", "rollup.config.js"]
+}
