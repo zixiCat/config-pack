@@ -11,10 +11,10 @@ import sass from 'rollup-plugin-sass'
 import typescript from 'rollup-plugin-typescript2'
 
 export default {
-  input: 'src/index.tsx',
+  input: 'src/index',
   output: [
     {
-      dir: 'dist',
+      dir: 'lib',
       format: 'cjs',
       exports: 'named',
       sourcemap: true,

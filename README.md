@@ -30,13 +30,20 @@ A module bundler for JavaScript which compiles small pieces of code into somethi
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/rollup.config.js' -OutFile 'rollup.config.js'"
 ```
 
-
 #### [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 
 The configuration of TypeScript.
 
 ```bash
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/tsconfig.json' -OutFile 'tsconfig.json'"
+```
+
+#### [.gitignore](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)
+
+You can configure Git to ignore files you don't want to check in
+
+```bash
+powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.gitignore' -OutFile '.gitignore'"
 ```
 
 

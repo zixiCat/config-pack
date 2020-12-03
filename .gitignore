@@ -4,16 +4,21 @@
 /node_modules
 /.pnp
 .pnp.js
-yarn.lock
 
 # testing
 /coverage
 
 # production
-/lib
-/.idea
+/build
+/dist
 
 # setting
+/.idea
+/.versionrc.js
+
+# lock
+package-lock.json
+yarn.lock
 
 # misc
 .DS_Store
