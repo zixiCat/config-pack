@@ -30,7 +30,7 @@ A module bundler for JavaScript which compiles small pieces of code into somethi
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/rollup.config.js' -OutFile 'rollup.config.js'"
 ```
 
-#### [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+#### [tsconfig.json](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 
 The configuration of TypeScript.
 
