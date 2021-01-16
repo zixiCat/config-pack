@@ -1,6 +1,6 @@
 # config-pack
 
-My config pack, which contains many configurations for personal use. Hope it can help you.
+My config pack, which contains many configurations for personal use. Hope it can help you (in continuously update).
 
 Assuming you'd like one of them, you could use following **PowerShell** command line to download it to current path.
 
