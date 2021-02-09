@@ -40,6 +40,7 @@ module.exports = {
     ],
     'react/display-name': 0,
     'require-jsdoc': 0,
+    'react/self-closing-comp': 2,
   },
   ignorePatterns: ['dist', 'build', 'lib'],
 };
