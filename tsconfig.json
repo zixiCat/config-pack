@@ -3,8 +3,8 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "outDir": "lib",
-    "module": "esnext",
-    "target": "es5",
+    "target": "ESNext",
+    "module": "CommonJS",
     "skipLibCheck": true,
     "lib": [
       "dom",
@@ -15,16 +15,15 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react-jsx",
     "declaration": true,
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "resolveJsonModule": true,
-    "noImplicitThis": false,
     "noImplicitAny": true,
+    "noImplicitThis": true,
     "strict": true,
-    "noUnusedLocals": true,
     "isolatedModules": true,
+    "strictNullChecks": true,
     "noUnusedParameters": true,
     "declarationDir": "dist",
     "forceConsistentCasingInFileNames": true,
@@ -32,7 +31,7 @@
     "noEmit": true
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "node_modules",
