@@ -13,7 +13,7 @@
  * @typescript-eslint/parser
  * @typescript-eslint/eslint-plugin
  * */
-module.exports = {
+ module.exports = {
   env: {
     browser: true,
     es2020: true,
@@ -38,8 +38,11 @@ module.exports = {
       'error',
       { semi: true, endOfLine: 'auto', singleQuote: true },
     ],
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-unused-vars': process.env.NODE_ENV === 'production' ? 2 : 1,
     'react/display-name': 0,
-    'require-jsdoc': 0,
+    'react/react-in-jsx-scope': 0, // when it comes to React17
     'react/self-closing-comp': 2,
   },
   ignorePatterns: ['dist', 'build', 'lib'],
