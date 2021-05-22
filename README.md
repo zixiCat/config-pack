@@ -22,7 +22,7 @@ A utility for versioning using semver and CHANGELOG generation powered by Conven
 powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.versionrc.js' -OutFile '.versionrc.js'"
 ```
 
-#### [rollup.config.js](http://rollupjs.org/guide/en/)
+#### [rollup.config.js](https://www.rollupjs.org/guide/en/#configuration-files)
 
 A module bundler for JavaScript which compiles small pieces of code into something larger and more complex
 
