@@ -10,7 +10,10 @@
     "changelog"
   ],
   "scripts": {
-    "lint:fix": "eslint --fix . --ext .js"
+    "commit": "node .githooks/customize.js",
+    "lint:fix": "eslint --fix . --ext .js",
+    "prepare": "node .githooks/config.js",
+    "release": "standard-version"
   },
   "bin": {
     "config-pack": "node ./lib/index.js"
@@ -28,6 +31,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "inquirer": "^8.1.1",
     "prettier": "^2.2.0"
   }
 }
