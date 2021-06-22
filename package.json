@@ -1,6 +1,7 @@
 {
   "name": "config-pack",
   "version": "1.0.0",
+  "main": "./lib/index",
   "homepage": "https://github.com/zixiCat/config-pack",
   "description": "My config pack, which contains many configurations for personal use",
   "keywords": [
@@ -10,6 +11,9 @@
   ],
   "scripts": {
     "lint:fix": "eslint --fix . --ext .js"
+  },
+  "bin": {
+    "config-pack": "node ./lib/index.js"
   },
   "repository": {
     "type": "git",
