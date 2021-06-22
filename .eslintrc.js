@@ -13,7 +13,7 @@
  * @typescript-eslint/parser
  * @typescript-eslint/eslint-plugin
  * */
- module.exports = {
+module.exports = {
   env: {
     browser: true,
     es2020: true,
@@ -45,5 +45,5 @@
     'react/react-in-jsx-scope': 0, // when it comes to React17
     'react/self-closing-comp': 2,
   },
-  ignorePatterns: ['dist', 'build', 'lib'],
+  ignorePatterns: ['dist', 'build', 'lib', '*.json'],
 };

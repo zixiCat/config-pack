@@ -13,7 +13,7 @@
  * @typescript-eslint/parser
  * @typescript-eslint/eslint-plugin
  * */
- module.exports = {
+module.exports = {
   env: {
     browser: true,
     es2020: true,

@@ -36,6 +36,6 @@
   "exclude": [
     "node_modules",
     "example",
-    "rollup.config.js"
+    "rollup.config.js",
   ]
 }
