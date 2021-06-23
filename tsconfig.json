@@ -4,7 +4,7 @@
     "experimentalDecorators": true,
     "outDir": "lib",
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "ESNext",
     "skipLibCheck": true,
     "lib": [
       "dom",
@@ -15,7 +15,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true,
+    "declaration": false,
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "resolveJsonModule": true,
@@ -25,7 +25,6 @@
     "isolatedModules": true,
     "strictNullChecks": true,
     "noUnusedParameters": true,
-    "declarationDir": "dist",
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noEmit": true
