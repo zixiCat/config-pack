@@ -1,12 +1,14 @@
 {
   "name": "config-pack",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/zixiCat/config-pack",
   "description": "My config pack, which contains many configurations for personal use",
   "keywords": [
     "config",
     "eslint",
-    "changelog"
+    "tsconfig",
+    "version",
+    "rollup"
   ],
   "scripts": {
     "commit": "node .githooks/customize.js",
@@ -18,7 +20,7 @@
     "release": "standard-version"
   },
   "bin": {
-    "config-pack": "node ./lib/index.js"
+    "config-pack": "node ./index.js"
   },
   "repository": {
     "type": "git",

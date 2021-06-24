@@ -1,10 +1,6 @@
-import fs from 'fs';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-
-// clean lib folder
-fs.rmdirSync('./lib', { recursive: true });
 
 export default {
   input: 'src/index.ts',
