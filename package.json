@@ -1,6 +1,6 @@
 {
   "name": "config-pack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/zixiCat/config-pack",
   "description": "My config pack, which contains many configurations for personal use",
   "keywords": [
@@ -17,7 +17,7 @@
     "build": "cross-env NODE_ENV=prod rollup -c",
     "lint:fix": "eslint --fix . --ext .js",
     "prepare": "node .githooks/config.js",
-    "release": "standard-version"
+    "release": "standard-version --no-verify"
   },
   "bin": {
     "config-pack": "node ./index.js"
