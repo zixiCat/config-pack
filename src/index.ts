@@ -9,9 +9,12 @@ import configMap from './configMap';
   const file = params._;
   file.forEach((i) => {
     const file = configMap[i];
-    if (file && folder && folder !== '.') {
+
+    file &&
+      folder &&
+      folder !== '.' &&
       fs.mkdirSync(folder, { recursive: true });
-    }
+
     file &&
       fs.copyFileSync(
         './config/' + file,
