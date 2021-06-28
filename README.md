@@ -1,51 +1,39 @@
 # config-pack
+[![NPM Status](https://img.shields.io/npm/v/config-pack.svg)](https://www.npmjs.com/package/config-pack)
 
-My config pack, which contains many configurations for personal use. Hope it can help you (in continuously update).
+My config pack, which contains some basic configurations or templates for personal use. Hope it can help you (in continuously update).
 
-Assuming you'd like one of them, you could use following **PowerShell** command line to download it to current path.
+Assuming you'd like one of them, you could use following **npm** command line.
 
-## Intro
+```sh
+# download rollup.config.js to current path
+npx config-pack rollup
+# use `--folder` or `-f` to download them to specific path
+npx config-pack -f my-app/config tsconfig eslint
+```
 
-#### [.eslintrc.js](https://eslint.org/docs/user-guide/configuring)
+## Supported configurations
+
+Note: Behind the file names is their own command alias
+#### [.eslintrc.js](https://eslint.org/docs/user-guide/configuring) [eslint | eslintrc]
 
 Find and fix problems in your JavaScript code
-
-```bash
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.eslintrc.js' -OutFile '.eslintrc.js'"
-```
-
-#### [.versionrc.js](https://github.com/conventional-changelog/standard-version)
+#### [.versionrc.js](https://github.com/conventional-changelog/standard-version) [version | versionrc]
 
 A utility for versioning using semver and CHANGELOG generation powered by Conventional Commits.
-
-```bash
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.versionrc.js' -OutFile '.versionrc.js'"
-```
-
-#### [rollup.config.js](https://www.rollupjs.org/guide/en/#configuration-files)
+#### [rollup.config.js](https://www.rollupjs.org/guide/en/#configuration-files) [rollup]
 
 A module bundler for JavaScript which compiles small pieces of code into something larger and more complex
-
-```bash
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/rollup.config.js' -OutFile 'rollup.config.js'"
-```
-
-#### [tsconfig.json](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+#### [tsconfig.json](https://www.typescriptlang.org/docs/handbook/compiler-options.html) [ts | tsconfig | typescript]
 
 The configuration of TypeScript.
 
-```bash
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/tsconfig.json' -OutFile 'tsconfig.json'"
-```
-
-#### [.gitignore](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files)
+#### [.gitignore](https://docs.github.com/en/free-pro-team@latest/github/using-git/ignoring-files) [gitignore]
 
 You can configure Git to ignore files you don't want to check in
+#### [LICENSE](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository) [license]
 
-```bash
-powershell -command "Invoke-WebRequest 'https://raw.githubusercontent.com/zixiCat/config-pack/master/.gitignore' -OutFile '.gitignore'"
-```
-
+MIT LICENSE
 
 ## Bug tracker
 
