@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/zixiCat/config-pack/compare/v1.1.0...v1.2.0) (2021-06-28)
+
+
+### Features
+
+* add script ([f5dab7b](https://github.com/zixiCat/config-pack/commit/f5dab7b009ea5383c640d8f9c240eff4f14ae2b8))
+
+
+### Bug Fixes
+
+* fix that gitignore and version can not be downloaded ([30a0ae9](https://github.com/zixiCat/config-pack/commit/30a0ae9e70e486977db952c9ea1bd038c78af0db))
+* modify some basic logic ([8ec643b](https://github.com/zixiCat/config-pack/commit/8ec643bee65bfbb34b7fb30f459e8067882d1bab))
+* update script ([7f88c46](https://github.com/zixiCat/config-pack/commit/7f88c46f8a7625a38a9938871e31b2bdfffdea8e))
+
 ## [1.1.0](https://github.com/zixiCat/config-pack/compare/v1.0.0...v1.1.0) (2021-06-24)
 
 
