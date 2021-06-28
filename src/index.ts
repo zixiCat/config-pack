@@ -9,17 +9,19 @@ import configMap from './configMap';
   const file = params._;
   file.forEach((i) => {
     const file = configMap[i];
+    if (file) {
+      folder && fs.mkdirSync(folder, { recursive: true });
 
-    file &&
-      folder &&
-      folder !== '.' &&
-      fs.mkdirSync(folder, { recursive: true });
-
-    file &&
       fs.copyFileSync(
-        './config/' + file,
-        path.join(process.cwd(), folder, file)
+        path.join(__dirname, '../config', file),
+        path.join(
+          process.cwd(),
+          folder,
+          // do not use .gitignore name directly or it will throw error somehow
+          file !== 'gitignore' ? file : '.gitignore'
+        )
       );
+    }
   });
 })().catch((err) => {
   if (err) throw err;

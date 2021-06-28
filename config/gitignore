@@ -15,7 +15,6 @@
 
 # setting
 /.idea
-/.versionrc.js
 
 # lock
 package-lock.json
