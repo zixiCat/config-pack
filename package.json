@@ -1,6 +1,6 @@
 {
   "name": "config-pack",
-  "version": "1.1.0",
+  "version": "1.1.20",
   "homepage": "https://github.com/zixiCat/config-pack",
   "description": "My config pack, which contains many configurations for personal use",
   "keywords": [
@@ -13,21 +13,28 @@
   "scripts": {
     "commit": "node .githooks/customize.js",
     "start": "rollup -c -w",
-    "mock": "node ./lib/index.js",
-    "build": "cross-env NODE_ENV=prod rollup -c",
+    "build": "cross-env NODE_ENV=prod node ./scripts/build.js",
     "lint:fix": "eslint --fix . --ext .js",
     "prepare": "node .githooks/config.js",
     "release": "standard-version --no-verify"
   },
   "bin": {
-    "config-pack": "node ./index.js"
+    "config-pack": "./lib/index.js"
   },
+  "files": [
+    "LICENSE",
+    "config",
+    "lib",
+    "package.json",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zixiCat/config-pack"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/node": "^15.12.4",
     "@types/yargs": "^17.0.0",
