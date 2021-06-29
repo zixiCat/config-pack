@@ -4,8 +4,8 @@
 My config pack, which contains some basic configurations or templates for personal use. Hope it can help you (in continuously update).
 
 ## Feature
-- [x] Support for downloading config files directly
-- [ ] Support for downloading the your remote files or folder from github directly (**upcoming**)
+- [x] Support for downloading config files from this repo directly
+- [ ] Support for downloading your remote files or folder from github directly (**upcoming**)
 
 ## Usage
 
