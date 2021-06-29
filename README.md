@@ -3,7 +3,13 @@
 
 My config pack, which contains some basic configurations or templates for personal use. Hope it can help you (in continuously update).
 
-Assuming you'd like one of them, you could use following **npm** command line.
+## Feature
+- [x] Support for downloading config files directly
+- [ ] Support for downloading the your remote files or folder from github directly (**upcoming**)
+
+## Usage
+
+Assuming you'd like one of them, you could use following **npm** command lines.
 
 ```sh
 # download rollup.config.js to current path
