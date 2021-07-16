@@ -14,11 +14,17 @@ Assuming you'd like one of them, you could use following **npm** command lines.
 ```sh
 # download rollup.config.js to current path
 npx config-pack rollup
+
 # use `--folder` or `-f` to download them to specific path
 npx config-pack tsconfig eslint -f my-app/config
-# download from remote file from github
+
+# download all remote files from github
+npx config-pack https://github.com/zixiCat/config-pack -f my-app
+
+# download a remote folder from github
 npx config-pack https://github.com/zixiCat/config-pack/tree/master/config -f my-app
-# download from remote file from github
+
+# download a remote file from github
 npx config-pack https://github.com/zixiCat/config-pack/blob/master/src/index.ts -f my-app/src
 ```
 
