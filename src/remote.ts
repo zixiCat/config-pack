@@ -5,7 +5,11 @@ import path from 'path';
 
 const sh = execSync;
 
-const REMOTE_CACHE_PATH = './node_modules/.cache/config-pack/temp';
+const REMOTE_CACHE_PATH = path.join(
+  __dirname,
+  '../',
+  './node_modules/.cache/config-pack/temp'
+);
 
 export interface RemoteInfo {
   branch: string;
@@ -50,14 +54,14 @@ export const getRemoteInfo = (url: string): RemoteInfo => {
 /**
  * download all remote file
  * @param {RemoteInfo} remoteInfo the info contained in url from
- * @param {string} folder the folder we download file/folder into
+ * @param {string} destination the folder we download file/folder into
  */
 export const downloadAllRemoteFile = (
   remoteInfo: RemoteInfo,
-  folder: string = '.'
+  destination: string
 ) => {
-  folder && fs.mkdirSync(folder, { recursive: true });
-  sh(`git clone ${remoteInfo.remote} ${folder}`);
+  fs.mkdirSync(destination, { recursive: true });
+  sh(`git clone ${remoteInfo.remote} ${destination}`);
 };
 
 /**
@@ -84,13 +88,13 @@ export const downloadSpecificRemoteFile = (
       // when target is file
       destination && fs.mkdirSync(destination, { recursive: true });
       fs.copyFileSync(
-        path.join(__dirname, '../', REMOTE_CACHE_PATH, target),
+        path.join(REMOTE_CACHE_PATH, target),
         path.join(process.cwd(), destination, targetName)
       );
     } else {
       // when target is folder
       copyDirectorySync(
-        path.join(__dirname, '../', REMOTE_CACHE_PATH, target),
+        path.join(REMOTE_CACHE_PATH, target),
         path.join(process.cwd(), destination)
       );
     }
@@ -109,7 +113,7 @@ export const downloadSpecificRemoteFile = (
 export const downloadRemoteFile = (url: string, destination: string) => {
   const info = getRemoteInfo(url);
   if (info.target === '/') {
-    downloadAllRemoteFile(info);
+    downloadAllRemoteFile(info, destination);
   } else {
     downloadSpecificRemoteFile(info, destination);
   }
