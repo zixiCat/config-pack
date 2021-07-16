@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/zixiCat/config-pack/compare/v1.2.0...v1.3.0) (2021-07-16)
+
+
+### Features
+
+* add some remote functions ([7fdc9d4](https://github.com/zixiCat/config-pack/commit/7fdc9d4348ee837052600a9ef59c1dd42d7e0965))
+* add the feature we could download files from remote ([4ece6f4](https://github.com/zixiCat/config-pack/commit/4ece6f42acf406079072c3c80428cba8c4d6257b))
+
 ## [1.2.0](https://github.com/zixiCat/config-pack/compare/v1.1.0...v1.2.0) (2021-06-28)
 
 
