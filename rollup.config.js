@@ -11,5 +11,5 @@ export default {
     },
   ],
   plugins: [typescript(), terser()],
-  external: ['fs', 'path'],
+  external: ['fs', 'path', 'child_process'],
 };

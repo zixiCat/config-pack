@@ -1,28 +1,15 @@
-import fs from 'fs';
-import path from 'path';
+import { findGithubRemote, downloadRemoteFile } from './remote';
 import { getArgv } from './argv';
-import configMap from './configMap';
+import { downloadLocalFile } from './local';
 
 (async function main() {
   const params = getArgv();
   const folder = params.folder || params.f || '.';
-  const file = params._;
-  file.forEach((i) => {
-    const file = configMap[i];
-    if (file) {
-      folder && fs.mkdirSync(folder, { recursive: true });
+  const target = params._;
 
-      fs.copyFileSync(
-        path.join(__dirname, '../config', file),
-        path.join(
-          process.cwd(),
-          folder,
-          // do not use .gitignore name directly or it will throw error somehow
-          file !== 'gitignore' ? file : '.gitignore'
-        )
-      );
-    }
-  });
+  const remoteUrl = findGithubRemote(target);
+  if (remoteUrl) downloadRemoteFile(remoteUrl, folder);
+  else downloadLocalFile(target, folder);
 })().catch((err) => {
   if (err) throw err;
 });

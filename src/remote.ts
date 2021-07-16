@@ -1,56 +1,116 @@
-const { execSync } = require('child_process');
+import { copyDirectorySync } from './utils';
+import fs from 'fs';
+import { execSync } from 'child_process';
+import path from 'path';
+
 const sh = execSync;
+
+const REMOTE_CACHE_PATH = './node_modules/.cache/config-pack/temp';
 
 export interface RemoteInfo {
   branch: string;
   author: string;
   type: 'file' | 'folder';
   repo: string;
-  path: string;
+  target: string;
   remote: string;
 }
 
 /**
- * determine if it's github remote
- * @param {String} url the fetched url
- * @return {Boolean} the res
+ * find the index of github remote in _ argv
+ * @param {string[]} otherArgv _ argv
+ * @return {string} the url of github remote in otherArgv
  */
-export const isGithubRemote = (url: string) => {
-  return url.includes('github.com');
+export const findGithubRemote = (otherArgv: string[]) => {
+  for (let i = 0; i < otherArgv.length; i++) {
+    if (otherArgv[i].includes('github.com')) return otherArgv[i];
+  }
+  return undefined;
 };
 
 /**
  * obtain the info from fetched url of github
- * @param {String} url the fetched url
+ * @param {string} url the fetched url
  * @return {Object} the info of fetching
  */
-export const getInfo = (url: string): RemoteInfo => {
+export const getRemoteInfo = (url: string): RemoteInfo => {
   const urlPath = url.split('github.com')[1];
   const urlPathArr = urlPath.split('/');
-  // if it's master
-  //   if(9)
 
   const author = urlPathArr[1];
   const repo = urlPathArr[2];
-  const type = urlPathArr[3] === 'tree' ? 'folder' : 'file';
+  const type = urlPathArr[3] === 'blob' ? 'file' : 'folder';
   const branch = urlPathArr[4];
-  const path = `/${urlPathArr.slice(4).join('/')}`;
+  const target = `/${urlPathArr.slice(5).join('/')}`;
   const remote = `https://github.com/${author}/${repo}`;
 
-  return {
-    branch,
-    author,
-    type,
-    repo,
-    path,
-    remote,
-  };
+  return { branch, author, type, repo, target, remote };
 };
 
 /**
- * obtain the info from fetched url of github
+ * download all remote file
  * @param {RemoteInfo} remoteInfo the info contained in url from
+ * @param {string} folder the folder we download file/folder into
  */
-export const generateTempSpace = (remoteInfo: RemoteInfo) => {
-  sh(`git clone ${remoteInfo.remote} ./tempConfig`);
+export const downloadAllRemoteFile = (
+  remoteInfo: RemoteInfo,
+  folder: string = '.'
+) => {
+  folder && fs.mkdirSync(folder, { recursive: true });
+  sh(`git clone ${remoteInfo.remote} ${folder}`);
+};
+
+/**
+ * download specific remote file/folder
+ * @param {RemoteInfo} remoteInfo the info contained in url from
+ * @param {string} destination the folder we download file/folder into
+ */
+export const downloadSpecificRemoteFile = (
+  remoteInfo: RemoteInfo,
+  destination: string
+) => {
+  const { type, target, remote } = remoteInfo;
+  fs.mkdirSync(REMOTE_CACHE_PATH, {
+    recursive: true,
+  });
+  try {
+    sh(`git clone ${remote} ${REMOTE_CACHE_PATH}`);
+
+    const targetName = target.split('/').pop();
+
+    if (!targetName) throw new Error('can not find the target file or folder');
+
+    if (type === 'file') {
+      // when target is file
+      destination && fs.mkdirSync(destination, { recursive: true });
+      fs.copyFileSync(
+        path.join(__dirname, '../', REMOTE_CACHE_PATH, target),
+        path.join(process.cwd(), destination, targetName)
+      );
+    } else {
+      // when target is folder
+      copyDirectorySync(
+        path.join(__dirname, '../', REMOTE_CACHE_PATH, target),
+        path.join(process.cwd(), destination)
+      );
+    }
+    fs.rmdirSync(REMOTE_CACHE_PATH, { recursive: true });
+  } catch (err) {
+    fs.rmdirSync(REMOTE_CACHE_PATH, { recursive: true });
+    throw err || new Error('can not find the target file or folder');
+  }
+};
+
+/**
+ * download remote file
+ * @param {string} url the fetched url
+ * @param {string} destination the folder we download file/folder into
+ */
+export const downloadRemoteFile = (url: string, destination: string) => {
+  const info = getRemoteInfo(url);
+  if (info.target === '/') {
+    downloadAllRemoteFile(info);
+  } else {
+    downloadSpecificRemoteFile(info, destination);
+  }
 };
