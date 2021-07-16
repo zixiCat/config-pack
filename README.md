@@ -1,7 +1,7 @@
 # config-pack
 [![NPM Status](https://img.shields.io/npm/v/config-pack.svg)](https://www.npmjs.com/package/config-pack)
 
-My config pack, which contains some basic configurations or templates for personal use. Hope it can help you (in continuously update).
+Config pack, which contains some basic configurations or templates for regular use. Hope it can help you (in continuously update).
 
 ## Feature
 - [x] Support for downloading config files from this repo directly
