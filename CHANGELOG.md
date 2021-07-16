@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.1](https://github.com/zixiCat/config-pack/compare/v1.3.0...v1.3.1) (2021-07-16)
+
+
+### Bug Fixes
+
+* fix the remote path ([b08bdf2](https://github.com/zixiCat/config-pack/commit/b08bdf22df800df00cc70ee70d0798cb2ee4dc5d))
+
 ## [1.3.0](https://github.com/zixiCat/config-pack/compare/v1.2.0...v1.3.0) (2021-07-16)
 
 
