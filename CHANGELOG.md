@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/zixiCat/config-pack/compare/v1.3.1...v1.4.0) (2021-07-19)
+
+
+### Features
+
+* add prompt ([357c8e4](https://github.com/zixiCat/config-pack/commit/357c8e422d2177ae11a9d4d3abb988de5c68ec16))
+
 ### [1.3.1](https://github.com/zixiCat/config-pack/compare/v1.3.0...v1.3.1) (2021-07-16)
 
 
