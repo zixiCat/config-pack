@@ -20,6 +20,7 @@ module.exports = {
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-invalid-this': 0,
     'no-unused-vars': process.env.NODE_ENV === 'production' ? 2 : 1,
   },
   ignorePatterns: ['dist', 'build', 'lib', '*.json'],

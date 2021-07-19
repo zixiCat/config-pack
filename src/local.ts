@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import Prompt from './prompt';
 import configMap from './configMap';
 
 /**
@@ -21,6 +22,8 @@ export const downloadLocalFile = (target: string[], destination: string) => {
           file !== 'gitignore' ? file : '.gitignore'
         )
       );
+    } else {
+      new Prompt().failed();
     }
   });
 };
