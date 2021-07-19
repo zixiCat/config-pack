@@ -1,7 +1,7 @@
 # config-pack
 [![NPM Status](https://img.shields.io/npm/v/config-pack.svg)](https://www.npmjs.com/package/config-pack)
 
-Config pack, which contains some basic configurations or templates for regular use. It can help you to download the config file you want **without downloading this npm package**
+Config pack, which contains some basic configurations or templates for regular use. It can help you to download the config file and the **remote files/folder** you want from github  **without downloading this npm package**
 
 ## Feature
 - [x] Support for downloading config files from this repo directly 
@@ -22,10 +22,10 @@ npx config-pack tsconfig eslint -f my-app/config
 npx config-pack https://github.com/zixiCat/config-pack -f my-app
 
 # download a remote folder from github
-npx config-pack https://github.com/zixiCat/config-pack/tree/master/config -f my-app
+npx config-pack https://github.com/zixiCat/tips/tree/master/src -f my-app
 
 # download a remote file from github
-npx config-pack https://github.com/zixiCat/config-pack/blob/master/src/index.ts -f my-app/src
+npx config-pack https://github.com/zixiCat/tips/blob/master/src/BabelJS.md -f my-app/src
 ```
 
 ## Supported configurations
