@@ -73,12 +73,12 @@ export const downloadSpecificRemoteFile = (
   remoteInfo: RemoteInfo,
   destination: string
 ) => {
-  const { type, target, remote } = remoteInfo;
+  const { type, target, remote, branch } = remoteInfo;
   fs.mkdirSync(REMOTE_CACHE_PATH, {
     recursive: true,
   });
   try {
-    sh(`git clone ${remote} ${REMOTE_CACHE_PATH}`);
+    sh(`git clone -b ${branch} --single-branch ${remote} ${REMOTE_CACHE_PATH}`);
 
     const targetName = target.split('/').pop();
 
