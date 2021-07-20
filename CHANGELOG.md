@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.1](https://github.com/zixiCat/config-pack/compare/v1.4.0...v1.4.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* fix that it can't clone specific branch ([c9ff386](https://github.com/zixiCat/config-pack/commit/c9ff38696cd5dffa5ecf919fc8b880ad1226804b))
+
 ## [1.4.0](https://github.com/zixiCat/config-pack/compare/v1.3.1...v1.4.0) (2021-07-19)
 
 
