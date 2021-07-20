@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2020: true,
   },
-  extends: ['plugin:react/recommended', 'google', 'prettier'],
+  extends: ['google', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', '@typescript-eslint'],
+  plugins: ['prettier', '@typescript-eslint'],
   rules: {
     'prettier/prettier': [
       'error',
