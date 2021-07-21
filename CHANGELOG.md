@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.2](https://github.com/zixiCat/config-pack/compare/v1.4.1...v1.4.2) (2021-07-21)
+
+
+### Bug Fixes
+
+* clear unuseful terminal output ([c3f1e6c](https://github.com/zixiCat/config-pack/commit/c3f1e6c33978438dbd9364371ba43cbb040f2143))
+* remove react parser ([61c481a](https://github.com/zixiCat/config-pack/commit/61c481aef9cf6db0552d32a729ccd19788da74b1))
+
 ### [1.4.1](https://github.com/zixiCat/config-pack/compare/v1.4.0...v1.4.1) (2021-07-20)
 
 
