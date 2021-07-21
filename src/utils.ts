@@ -18,3 +18,11 @@ export const copyDirectorySync = (source: string, destination: string) => {
       : fs.copyFileSync(sourcePath, destinationPath);
   });
 };
+
+/**
+ * clear last output log
+ */
+export const clearLastLine = () => {
+  process.stdout.moveCursor(0, -1); // up one line
+  process.stdout.clearLine(1); // from cursor to end
+};

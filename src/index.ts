@@ -1,5 +1,6 @@
 import Prompt from './prompt';
 import { getArgv } from './argv';
+import { clearLastLine } from './utils';
 import { downloadLocalFile } from './local';
 import { findGithubRemote, downloadRemoteFile } from './remote';
 
@@ -10,6 +11,8 @@ import { findGithubRemote, downloadRemoteFile } from './remote';
 
   const remoteUrl = findGithubRemote(target);
   const prompt = new Prompt();
+
+  clearLastLine();
   prompt.fetching();
   if (remoteUrl) downloadRemoteFile(remoteUrl, folder);
   else downloadLocalFile(target, folder);

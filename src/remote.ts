@@ -1,4 +1,4 @@
-import { copyDirectorySync } from './utils';
+import { copyDirectorySync, clearLastLine } from './utils';
 import fs from 'fs';
 import { execSync } from 'child_process';
 import path from 'path';
@@ -62,6 +62,7 @@ export const downloadAllRemoteFile = (
 ) => {
   fs.mkdirSync(destination, { recursive: true });
   sh(`git clone ${remoteInfo.remote} ${destination}`);
+  clearLastLine();
 };
 
 /**
@@ -79,6 +80,7 @@ export const downloadSpecificRemoteFile = (
   });
   try {
     sh(`git clone -b ${branch} --single-branch ${remote} ${REMOTE_CACHE_PATH}`);
+    clearLastLine();
 
     const targetName = target.split('/').pop();
 
