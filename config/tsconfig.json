@@ -26,6 +26,7 @@
     "strictNullChecks": true,
     "noUnusedParameters": true,
     "declarationDir": "dist",
+    "jsx": "react-jsx",
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noEmit": true
