@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.3](https://github.com/zixiCat/config-pack/compare/v1.4.2...v1.4.3) (2021-09-03)
+
 ### [1.4.2](https://github.com/zixiCat/config-pack/compare/v1.4.1...v1.4.2) (2021-07-21)
 
 
