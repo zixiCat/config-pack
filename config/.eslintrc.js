@@ -44,6 +44,8 @@ module.exports = {
     'react/display-name': 0,
     'react/react-in-jsx-scope': 0, // when it comes to React17
     'react/self-closing-comp': 2,
+    'react-hooks/exhaustive-deps': 2,
+    'react/jsx-curly-brace-presence': 2,
   },
   ignorePatterns: ['dist', 'build', 'lib'],
 };
