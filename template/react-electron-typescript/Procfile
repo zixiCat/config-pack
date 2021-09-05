@@ -1,0 +1,3 @@
+start-web: npm run start-web
+start-app: npm run start-app
+watch-app: npm run watch-app

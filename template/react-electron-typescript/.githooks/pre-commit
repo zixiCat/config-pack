@@ -1,0 +1,5 @@
+#!/bin/sh
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+echo -e "ERROR: Please run ${RED}npm run commit${NC} or ${RED}yarn commit${NC} to commit your message"
+exit 1
