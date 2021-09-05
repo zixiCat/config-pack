@@ -29,6 +29,17 @@ inquirer
       ],
     },
     {
+      type: 'list',
+      name: 'scope',
+      loop: false,
+      message: 'The scope you want to select',
+      choices: [
+        'base',
+        'config',
+        'template',
+      ],
+    },
+    {
       type: 'input',
       name: 'message',
       message: 'The message you want to commit:',
@@ -38,7 +49,7 @@ inquirer
     },
   ])
   .then((answers) => {
-    const msg = `${answers.type}: ${answers.message.trim()}`;
+    const msg = `${answers.type}(${answers.scope}): ${answers.message.trim()}`;
     const command = `git commit ${argv.join(' ')} -m "${msg}" -n`;
     sh(command, (error, stdout, stderr) => {
       if (error !== null) {
