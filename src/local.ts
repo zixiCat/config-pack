@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import Prompt from './prompt';
-import configMap from './configMap';
+import { configMap } from './hashMap';
 
 /**
  * download remote file

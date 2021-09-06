@@ -1,3 +1,4 @@
+/* config files */
 const eslintFile = '.eslintrc.js';
 const tsconfigFile = 'tsconfig.json';
 const gitignoreFile = 'gitignore';
@@ -5,7 +6,11 @@ const licenseFile = 'LICENSE';
 const rollupFile = 'rollup.config.js';
 const versionFile = '.versionrc.js';
 
-const configMap: { [x: string]: string } = {
+/* template directory */
+const reactTypescript = 'react-typescript';
+const reactElectronTypescript = 'react-electron-typescript';
+
+export const configMap: { [x: string]: string } = {
   eslint: eslintFile,
   eslintrc: eslintFile,
   ts: tsconfigFile,
@@ -18,4 +23,9 @@ const configMap: { [x: string]: string } = {
   versionrc: versionFile,
 };
 
-export default configMap;
+export const templateMap: { [x: string]: string } = {
+  'react-typescript': reactTypescript,
+  'react-ts': reactTypescript,
+  'react-electron-typescript': reactElectronTypescript,
+  'react-electron-ts': reactElectronTypescript,
+};
