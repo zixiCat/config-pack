@@ -1,0 +1,2 @@
+[alias]
+    cb = branch --show-current
