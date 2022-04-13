@@ -1,2 +1,3 @@
 [alias]
     cb = branch --show-current
+	reset-cb =  !git fetch $1 && git reset --hard $1/$(git branch --show-current) && :
