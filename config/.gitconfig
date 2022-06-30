@@ -1,3 +1,11 @@
 [alias]
+	# current branch
     cb = branch --show-current
-	reset-cb =  !git fetch $1 && git reset --hard $1/$(git branch --show-current) && :
+	# fetch sources and reset current branch
+	rc =  !git fetch $1 && git reset --hard $1/$(git branch --show-current) && :
+	# search branch and checkout to it
+	ck = !git checkout $(git branch | fzf)
+	# search branch and delete it
+	del = !git branch -D $(git branch | fzf)
+    # search branch and pull it
+	pl = !git pull $1 $(git branch | fzf) && :
