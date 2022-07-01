@@ -1,6 +1,8 @@
 [alias]
 	# current branch
     cb = branch --show-current
+	# push current branch
+	pu = !git push $1 head && :
 	# fetch sources and reset --hard current branch
 	rh =  !git fetch $1 && git reset --hard $1/$(git branch --show-current) && :
 	# search branch and checkout to it
