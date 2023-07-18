@@ -11,7 +11,7 @@
     "rollup"
   ],
   "scripts": {
-    "commit": "node .githooks/customize.js",
+    "cm": "node .githooks/customize.js",
     "start": "rollup -c -w",
     "build": "cross-env NODE_ENV=prod node ./scripts/build.js",
     "lint:fix": "eslint --fix . --ext .js",
@@ -42,6 +42,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "inquirer": "^8.1.1",
+    "inquirer-search-list": "^1.2.6",
     "prettier": "^2.3.1",
     "rollup": "^2.52.2",
     "rollup-plugin-terser": "^7.0.2",
